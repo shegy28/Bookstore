@@ -20,10 +20,10 @@ nav {
 
 .nav-items {
   display: flex;
-  gap:15px;
+  gap: 15px;
 }
 
-.nav-items li  {
+.nav-items li {
   list-style: none;
 }
 

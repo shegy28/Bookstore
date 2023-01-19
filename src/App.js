@@ -10,12 +10,12 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element ={<BooksPage />}></Route>
-          <Route path= "category" element = {<CategoriesPage />}></Route>
+          <Route path="/" element={<BooksPage />} />
+          <Route path="category" element={<CategoriesPage />} />
         </Routes>
       </div>
     </BrowserRouter>
-    
+
   );
 }
 
