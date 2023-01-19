@@ -9,11 +9,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
+        <Routes>
+          <Route path="/" element ={<BooksPage />}></Route>
+          <Route path= "category" element = {<CategoriesPage />}></Route>
+        </Routes>
       </div>
-      <Routes>
-        <Route path="/" element ={<BooksPage />}></Route>
-        <Route path= "category" element = {<CategoriesPage />}></Route>
-      </Routes>
     </BrowserRouter>
     
   );

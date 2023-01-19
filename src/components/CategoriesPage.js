@@ -2,7 +2,9 @@ import React from 'react'
 
 const CategoriesPage = () => {
   return (
-    <div>CategoriesPage</div>
+    <div>
+      <button type='button'>Check status</button>
+    </div>
   )
 }
 
