@@ -4,7 +4,7 @@ const Book = (props) => {
   const {singleBook} = props
   return (
     
-        <li>
+        <li className='eachbook'>
             <div>
                 <h3>{singleBook.title}</h3>
             </div>

@@ -26,3 +26,8 @@ nav {
 .nav-items li  {
   list-style: none;
 }
+
+.eachbook {
+  border: solid black 0.5px;
+  margin: 1%;
+}

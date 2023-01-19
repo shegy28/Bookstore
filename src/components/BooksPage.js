@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import AddBook from './AddBook';
 import BookLists from './BookLists';
 const BooksPage = () => {
   const [books , setbooks] = useState(
@@ -32,8 +33,12 @@ const BooksPage = () => {
 
  
   return (
-    <div><BookLists bookset ={books}
-    delTodo = {delTodo} /></div>
+    <div>
+      <BookLists bookset ={books}
+        delTodo = {delTodo} 
+      />
+      <AddBook />
+    </div>
   )
 }
 
