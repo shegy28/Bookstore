@@ -11,7 +11,7 @@ const deletBookAction = (book) => ({
   book,
 });
 
-const bookreducer = (state = [], action) => {
+const bookreducer = (state = [], action = {}) => {
   switch (action.type) {
     case ADD_BOOK:
       return state.push(action.book);
