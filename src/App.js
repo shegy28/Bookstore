@@ -4,6 +4,7 @@ import BooksPage from './components/BooksPage';
 import CategoriesPage from './components/CategoriesPage';
 import Navbar from './components/Navbar';
 
+
 function App() {
   return (
     <BrowserRouter>
