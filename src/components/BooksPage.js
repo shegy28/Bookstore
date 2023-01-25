@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import AddBook from './AddBook';
 import BookLists from './BookLists';
-import { useSelector } from 'react-redux';
+
 const BooksPage = () => {
-  const books = useSelector((state) => state.book)
+  const books = useSelector((state) => state.book);
 
   return (
     <div>
