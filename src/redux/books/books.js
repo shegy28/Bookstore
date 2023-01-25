@@ -1,23 +1,25 @@
-const ADD_BOOK = 'bookstore/book/add';
-const DELETE_BOOK = 'bookstore/book/delete';
+import initialState from '../initialState/initialState';
+
+const ADD_BOOK = 'addbook';
+const DELETE_BOOK = 'deletebook';
 
 const addBookAction = (book) => ({
   type: ADD_BOOK,
   book,
 });
 
-const deletBookAction = (book) => ({
+const deletBookAction = (index) => ({
   type: DELETE_BOOK,
-  book,
+  index,
 });
 
-const bookreducer = (state = [], action = {}) => {
+const bookreducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case ADD_BOOK:
-      return state.push(action.book);
+      return [...state, action.book];
 
     case DELETE_BOOK:
-      return state.filter((book) => book.id !== action.book.id);
+      return [...state.filter((book) => book.id !== action.index)];
 
     default: return state;
   }
