@@ -1,5 +1,3 @@
-
-
 const STATUS_CHECKED = 'bookstore/categories/STATUS_CHECKED';
 
 const checkStatusAction = () => ({
