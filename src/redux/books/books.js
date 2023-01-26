@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+
 const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/AMbn2x4nWFRrS3L1Q4cn/books';
 
 const ADD_BOOK = 'addbook';
@@ -18,24 +19,24 @@ const addBookAction = createAsyncThunk(
       payload: book,
     });
   },
-)
+);
 
 const deletBookAction = createAsyncThunk(
   DELETE_BOOK,
-  async (id , {dispatch}) => {
+  async (id, { dispatch }) => {
     await fetch(`${URL}/${id}`, {
       method: 'DELETE',
     });
     dispatch({
       type: DELETE_BOOK,
-      payload: {id},
-    })
-  }
+      payload: { id },
+    });
+  },
 );
 
 const getBookAction = createAsyncThunk(
   GET_BOOKS,
-  async (post, {dispatch}) => {
+  async (post, { dispatch }) => {
     const response = await fetch(URL);
     const data = await response.json();
     const books = Object.keys(data).map((key) => ({
@@ -44,10 +45,10 @@ const getBookAction = createAsyncThunk(
     }));
     dispatch({
       type: GET_BOOKS,
-      payload: books
-    })
-  }
-)
+      payload: books,
+    });
+  },
+);
 
 const bookreducer = (state = [], action = {}) => {
   switch (action.type) {
