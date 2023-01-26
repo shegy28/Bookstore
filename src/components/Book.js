@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { deletBookAction } from '../redux/books/books';
 
 /* eslint-disable react/prop-types */
+/* eslint-disable camelcase */
 
 const Book = ({ singleBook }) => {
   const { item_id, title, author } = singleBook;
