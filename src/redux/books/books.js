@@ -24,7 +24,7 @@ const deletBookAction = createAsyncThunk(
   DELETE_BOOK,
   async (id , {dispatch}) => {
     await fetch(`${URL}/${id}`, {
-      method: 'DELETE'
+      method: 'DELETE',
     });
     dispatch({
       type: DELETE_BOOK,
@@ -55,7 +55,7 @@ const bookreducer = (state = [], action = {}) => {
       return [...state, action.payload];
 
     case DELETE_BOOK:
-      return [...state.filter((book) => book.id !== action.payload.id)];
+      return state.filter((book) => book.item_id !== action.payload.id);
 
     case GET_BOOKS:
       return action.payload;
@@ -64,5 +64,5 @@ const bookreducer = (state = [], action = {}) => {
   }
 };
 
-export { addBookAction, deletBookAction };
+export { addBookAction, deletBookAction, getBookAction };
 export default bookreducer;

@@ -8,7 +8,7 @@ const BookLists = (props) => {
   return (
     <ul>
       {bookset.map((eachBook) => (
-        <Book key={eachBook.id} singleBook={eachBook} />
+        <Book key={eachBook.item_id} singleBook={eachBook} />
       ))}
     </ul>
 
