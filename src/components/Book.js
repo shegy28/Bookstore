@@ -3,13 +3,14 @@ import { useDispatch } from 'react-redux';
 import { deletBookAction } from '../redux/books/books';
 
 /* eslint-disable react/prop-types */
+/* eslint-disable camelcase */
 
 const Book = ({ singleBook }) => {
-  const { id, title, author } = singleBook;
+  const { item_id, title, author } = singleBook;
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(deletBookAction(id));
+    dispatch(deletBookAction(item_id));
   };
 
   return (
@@ -20,7 +21,7 @@ const Book = ({ singleBook }) => {
       </div>
       <div>
         <p>{author}</p>
-        <span><button type="button" onClick={handleDelete} id={id}>Delete</button></span>
+        <span><button type="button" onClick={handleDelete} id={item_id}>Delete</button></span>
       </div>
     </li>
 

@@ -5,9 +5,10 @@ import { addBookAction } from '../redux/books/books';
 
 const bookcreator = (title, author) => (
   {
-    id: uuidv4(),
+    item_id: uuidv4(),
     title,
     author,
+    category: 'Fiction',
   }
 
 );
@@ -23,6 +24,8 @@ const AddBook = () => {
 
     if (title !== '' && author !== '') {
       dispatch(addBookAction(bookcreator(title, author)));
+      titlevalue.current.value = '';
+      authorvalue.current.value = '';
     } else {
       e.preventDefault();
     }
