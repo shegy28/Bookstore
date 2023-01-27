@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,26 +6,82 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Montserrat",sans-serif;
   line-height: 1.4;
   color: #444;
   background: rgb(255, 255, 255);
   height: 100vh;
 }
 
+.App {
+  background-color: #f2f3f7;
+  padding: 4% 4%;
+  height: 100vh;
+}
+
+.book-container {
+  background-color: #fafafa;
+}
+
+
 nav {
   display: flex;
-  justify-content: space-between;
-  padding: 5% 15% 5% 5%;
+  justify-content:space-between;
+  align-items: center;
+  padding: 2% 5% 2% 5%;
+  background-color: white;
+  gap: 60px;
+  border-bottom: #f2f3f7 solid 1px;
+
+}
+
+.logo-link {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+  gap: 250px;
+}
+
+.logo {
+  font-family: "Montserrat",sans-serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0290ff;
 }
 
 .nav-items {
   display: flex;
-  gap: 15px;
+  gap: 60px;
+  margin-left: -200px;
+  
 }
 
 .nav-items li {
   list-style: none;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  font-family: "Montserrat",sans-serif;
+  font-size: .813rem;
+  color: #121212;
+  opacity: .5;
+  letter-spacing: 1.9px;
+}
+
+.icon {
+  padding: 0.8% 1%;
+  border-radius: 53%;
+  border: #969696 solid 1px ;
+  color: #0290ff;
+  background-color: white;
+  font-size: 20px;
+  
+}
+
+.book-contain{
+  padding: 4% 4%;
 }
 
 .eachbook {

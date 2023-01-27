@@ -8,11 +8,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<BooksPage />} />
-          <Route path="category" element={<CategoriesPage />} />
-        </Routes>
+        <div className='book-container'>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<BooksPage />} />
+            <Route path="category" element={<CategoriesPage />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
 

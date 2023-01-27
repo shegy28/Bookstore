@@ -13,7 +13,7 @@ const BooksPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className='book-contain'>
       <BookLists
         bookset={books}
       />
