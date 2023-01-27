@@ -17,6 +17,7 @@ const BooksPage = () => {
       <BookLists
         bookset={books}
       />
+      <hr className='form-line'/>
       <AddBook />
     </div>
   );

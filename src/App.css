@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +16,7 @@ body {
 .App {
   background-color: #f2f3f7;
   padding: 4% 4%;
-  height: 100vh;
+  
 }
 
 .book-container {
@@ -54,7 +54,6 @@ nav {
   display: flex;
   gap: 60px;
   margin-left: -200px;
-  
 }
 
 .nav-items li {
@@ -70,6 +69,10 @@ nav {
   letter-spacing: 1.9px;
 }
 
+.nav-items li a:focus {
+  opacity: .9;
+}
+
 .icon {
   padding: 0.8% 1%;
   border-radius: 53%;
@@ -82,6 +85,7 @@ nav {
 
 .book-contain{
   padding: 4% 4%;
+
 }
 
 .book-list {
@@ -232,4 +236,61 @@ hr {
     font-weight: 300;
     letter-spacing: .5px;
     color: #fff;
+    width: max-content;
+}
+
+.form-line {
+  background-color: #e8e8e8;
+  margin-top: 40px;
+}
+
+.add-book {
+  margin-top: 40px;
+  font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -.18px;
+    color: #888;
+    font-family: "Montserrat",sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+input {
+  padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    font-size: 1rem;
+    letter-spacing: -.15px;
+    color: #121212;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #0290ff;
+}
+
+.input-title {
+  width: 50%;
+}
+
+.input-author{
+  width: 30%;
+}
+
+.add-btn {
+  cursor: pointer;
+    border: none;
+    background-color: #0290ff;
+    border-radius: 3px;
+    padding: 8px 24px;
+    font-family: "Roboto Slab",sans-serif;
+    font-weight: 300;
+    letter-spacing: .5px;
+    color: #fff;
+    width: 19%;
 }
