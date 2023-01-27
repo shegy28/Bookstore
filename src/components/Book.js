@@ -6,23 +6,46 @@ import { deletBookAction } from '../redux/books/books';
 /* eslint-disable camelcase */
 
 const Book = ({ singleBook }) => {
-  const { item_id, title, author } = singleBook;
+  const { item_id, title, author, category } = singleBook;
   const dispatch = useDispatch();
 
   const handleDelete = () => {
     dispatch(deletBookAction(item_id));
   };
+  
 
   return (
 
     <li className="eachbook">
-      <div>
-        <h3>{title}</h3>
+      <div className='book'>
+        <div className='book-headers'>
+          <h4 className='category'>{category}</h4>
+          <h2 className='title'>{title}</h2>
+          <p className='author'>{author}</p>
+        </div>
+        <div className='buttons'>
+          <span><button type="button">Comment</button></span> <hr/>
+            <span><button type="button" onClick={handleDelete} id={item_id}>Remove</button></span><hr/>
+            <span><button type="button" >Edit</button></span>
+        </div>
       </div>
-      <div>
-        <p>{author}</p>
-        <span><button type="button" onClick={handleDelete} id={item_id}>Delete</button></span>
+      <div className='details'>
+        <div className='percetage-complete'>
+          <div className='completed-circle'>
+          </div>
+          <div>
+            <p className='t64'>64%</p>
+            <p className='completed'>Completed</p>
+          </div>
+        </div>
+        <hr className='complete-line'/>
+        <div className='chapter-progress'>
+          <h4 className='current'>CURRENT CHAPTER</h4>
+          <h4 className='chapter'>Chapter 17</h4>
+          <button type='button' className='update'>UPDATE PROGRESS</button>
+        </div>
       </div>
+      
     </li>
 
   );
