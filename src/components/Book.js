@@ -25,7 +25,7 @@ const Book = ({ singleBook }) => {
           <p className="author">{author}</p>
         </div>
         <div className="buttons">
-          <span><button type="button">Comment</button></span>
+          <span><button type="button">Comments</button></span>
           {' '}
           <hr />
           <span><button type="button" onClick={handleDelete} id={item_id}>Remove</button></span>
