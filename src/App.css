@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,29 +6,285 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.4;
   color: #444;
   background: rgb(255, 255, 255);
   height: 100vh;
 }
 
+.App {
+  background-color: #f2f3f7;
+  padding: 4% 4%;
+}
+
+.book-container {
+  background-color: #fafafa;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 5% 15% 5% 5%;
+  align-items: center;
+  padding: 2% 5% 2% 5%;
+  background-color: white;
+  gap: 60px;
+  border-bottom: #d7d8da solid 1px;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+  gap: 250px;
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0290ff;
 }
 
 .nav-items {
   display: flex;
-  gap: 15px;
+  gap: 60px;
+  margin-left: -200px;
 }
 
 .nav-items li {
   list-style: none;
 }
 
+.nav-items li a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  opacity: 0.5;
+  letter-spacing: 1.9px;
+}
+
+.nav-items li a:focus {
+  opacity: 0.9;
+}
+
+.icon {
+  padding: 0.8% 1%;
+  border-radius: 53%;
+  border: #f0f1f5 solid 1px;
+  color: #0290ff;
+  background-color: white;
+  font-size: 20px;
+}
+
+.book-contain {
+  padding: 4% 4%;
+}
+
+.book-list {
+  list-style: none;
+}
+
 .eachbook {
-  border: solid black 0.5px;
-  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: #d7d8da  solid 1px;
+  padding: 3% 7% 3% 3%;
+  margin-bottom: 2%;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+
+.details {
+  display: flex;
+}
+
+.book-headers {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 0;
+}
+
+.category {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  font-weight: 700;
+  color: #121212;
+}
+
+.title {
+  font-weight: 700;
+  color: #121212;
+  margin-top: 3px;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.author {
+  font-family: "Roboto Slab", sans-serif;
+  margin-top: -3px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+span button {
+  background-color: white;
+  font-family: "Roboto Slab", sans-serif;
+  border: none;
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
+  align-items: center;
+  cursor: pointer;
+}
+
+hr {
+  background-color: #d7d8da;
+}
+
+.percetage-complete {
+  display: flex;
+  gap: 20px;
+}
+
+.completed-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: #307bbe solid 5px;
+  border-left-color: #e8e8e8;
+  transform: rotate(45deg);
+}
+
+.t64 {
+  font-family: "Montserrat", sans-serif;
+  color: #121212;
+  font-size: xx-large;
+}
+
+.completed {
+  opacity: 0.5;
+  color: #121212;
+}
+
+.complete-line {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
+}
+
+.chapter-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.current {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  color: #121212;
+  font-size: 0.813rem;
+  opacity: 0.5;
+}
+
+.chapter {
+  margin-top: -7px;
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  color: #121212;
+  opacity: 0.8;
+}
+
+.update {
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 8px 24px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #fff;
+  width: max-content;
+}
+
+.form-line {
+  background-color: #e8e8e8;
+  margin-top: 40px;
+}
+
+.add-book {
+  margin-top: 40px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+  color: #888;
+  font-family: "Montserrat", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #0290ff;
+}
+
+.input-title {
+  width: 50%;
+}
+
+.input-author {
+  width: 30%;
+}
+
+.add-btn {
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 8px 24px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #fff;
+  width: 19%;
 }

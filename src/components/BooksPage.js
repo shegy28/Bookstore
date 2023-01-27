@@ -13,10 +13,11 @@ const BooksPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="book-contain">
       <BookLists
         bookset={books}
       />
+      <hr className="form-line" />
       <AddBook />
     </div>
   );
