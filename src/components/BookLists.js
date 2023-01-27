@@ -6,7 +6,7 @@ import Book from './Book';
 const BookLists = (props) => {
   const { bookset } = props;
   return (
-    <ul className='book-list'>
+    <ul className="book-list">
       {bookset.map((eachBook) => (
         <Book key={eachBook.item_id} singleBook={eachBook} />
       ))}

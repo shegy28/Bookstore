@@ -33,11 +33,11 @@ const AddBook = () => {
 
   return (
     <div>
-      <h2 className='add-book'>ADD NEW BOOK</h2>
+      <h2 className="add-book">ADD NEW BOOK</h2>
       <form>
-        <input type="text" placeholder="Book title" ref={titlevalue} required  className='input-title'/>
-        <input type="text" placeholder="Book author" ref={authorvalue} required className='input-author' />
-        <button type="button" onClick={handleSubmit} className='add-btn' >ADD BOOK</button>
+        <input type="text" placeholder="Book title" ref={titlevalue} required className="input-title" />
+        <input type="text" placeholder="Book author" ref={authorvalue} required className="input-author" />
+        <button type="button" onClick={handleSubmit} className="add-btn">ADD BOOK</button>
       </form>
     </div>
   );
